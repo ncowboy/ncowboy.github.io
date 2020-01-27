@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RE:MAC - Срочный ремонт Apple Ipad</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+<header class="header">
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="navbar__top">
+      <div class="container flex-lg-nowrap">
+        <a class="navbar__logo" href="index.html">
+          <div class="navbar__logo-img"></div>
+          <div class="navbar__logo-text">Срочный ремонт<br>
+            Apple Ipad
+          </div>
+        </a>
+        <nav class="menu menu_navbar-fixed">
+          <ul class="menu__items menu__items_navbar-fixed">
+            <li class="menu__item menu__item_navbar-fixed"><a href="/#price" data-target="1"
+                                                              class="menu__link menu__link_navbar-fixed">Стоимость</a>
+            </li>
+            <li class="menu__item menu__item_navbar-fixed"><a href="/#about" data-target="2" class="menu__link menu__link_navbar-fixed">О
+              нас</a></li>
+            <li class="menu__item menu__item_navbar-fixed"><a href="/#garantee" data-target="3"
+                                                              class="menu__link menu__link_navbar-fixed">Гарантия</a>
+            </li>
+            <li class="menu__item menu__item_navbar-fixed"><a href="/#feedbacks" data-target="4"
+                                                              class="menu__link menu__link_navbar-fixed">Отзывы</a></li>
+          </ul>
+        </nav>
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                data-target="#collapsedContacts, #collapsedMenu"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar__contacts collapse navbar-collapse" id="collapsedContacts">
+          <div class="navbar__contacts-block navbar__contacts-block_fixed-hidden">
+            <p class="navbar__contact navbar__contact_address">Авиаконструкторов, д.2</p>
+          </div>
+          <div class="navbar__contacts-block">
+            <a class="navbar__contact navbar__contact_phone" href="tel:+78129954457">8 (812) 995-44-57</a>
+          </div>
+          <div class="navbar__contacts-block navbar__contacts-block_fixed-hidden">
+            <a class="navbar__contact navbar__contact_email" href="mailto:remac78@inbox.ru">remac78@inbox.ru</a>
+          </div>
+          <div class="navbar__contacts-block">
+            <button class="btn" data-toggle="modal" data-target="#contactForm">Связаться с нами</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="collapse__wrapper">
+      <div class="navbar__bottom collapse navbar-collapse" id="collapsedMenu">
+        <div class="container">
+          <nav class="menu">
+            <ul class="menu__items">
+              <li class="menu__item"><a href="/#price" data-target="1" class="menu__link">Стоимость</a></li>
+              <li class="menu__item"><a href="/#about" data-target="2" class="menu__link">О нас</a></li>
+              <li class="menu__item"><a href="/#garantee" data-target="3" class="menu__link">Гарантия</a></li>
+              <li class="menu__item"><a href="/#feedbacks" data-target="4" class="menu__link">Отзывы</a></li>
+            </ul>
+          </nav>
+          <div class="navbar__contacts navbar__contacts_mobile">
+            <div class="navbar__contacts-block navbar__contacts-block_mobile">
+              <p class="navbar__contact navbar__contact_address">Авиаконструкторов, д.2</p>
+            </div>
+            <div class="navbar__contacts-block navbar__contacts-block_mobile">
+              <a class="navbar__contact navbar__contact_phone" href="tel:+78129954457">8 (812) 995-44-57</a>
+            </div>
+            <div class="navbar__contacts-block navbar__contacts-block_mobile">
+              <a class="navbar__contact navbar__contact_email" href="mailto:remac78@inbox.ru">remac78@inbox.ru</a>
+            </div>
+            <div class="navbar__contacts-block navbar__contacts-block_mobile">
+              <button class="btn" data-toggle="modal" data-target="#contactForm">Связаться с нами</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="header__promo">
+    <div class="container">
+      <h1 class="header__promo-header">Отремонитруем Apple Ipad уже сегодня!</h1>
+      <h2 class="header__promo-subheader">9 из 10 поломок исправляем в день обращения</h2>
+      <div class="row">
+        <div class="header__advantages col-xl-7 col-lg-8 col-md-12">
+          <div class="row flex-wrap flex-sm-nowrap flex-md-nowrap">
+            <div class="header__advantages-block"><p class="header__advantages-text">Гарантия сервисного<br>
+              центра от 1 года</p>
+            </div>
+            <div class="header__advantages-block"><p class="header__advantages-text">Только оригинальные <br>
+              запчасти</p>
+            </div>
+            <div class="header__advantages-block"><p class="header__advantages-text">Бесплатная диагностика<br>
+              аппарата</p>
+            </div>
+          </div>
+          <div class="container container_auto">
+            <div class="row align-items-baseline">
+              <p class="header__promo-check">Узнайте стоимость ремонта сейчас:</p>
+              <a href="/#price" class="btn btn_blue btn_xs-block">узнать</a>
+            </div>
+          </div>
+        </div>
+        <div class="header__image col-xl-5 col-lg-4 d-lg-block d-md-none d-sm-none d-none jq-hidden">
+          <img src="images/ipad__bj8z4pfznqnm_large-min.png" alt="iPad">
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<section id="price" class="block calculator">
+  <div class="container">
+    <header class="section__header">Какая у Вас модель iPad ?</header>
+    <div class="row calculator__row">
+      <div class="calculator__row-wrapper col-md-3 col-sm-6 col-6">
+        <a href="calculator.html" class="calculator__block">
+          <p class="calculator__model">11 Pro Max</p>
+        </a>
+      </div>
+      <div class="calculator__row-wrapper col-md-3 col-sm-6 col-6">
+        <a href="calculator.html" class="calculator__block">
+          <p class="calculator__model">11 Pro</p>
+        </a>
+      </div>
+      <div class="calculator__row-wrapper col-md-3 col-sm-6 col-6">
+        <a href="calculator.html" class="calculator__block">
+          <p class="calculator__model">11</p>
+        </a>
+      </div>
+      <div class="calculator__row-wrapper col-md-3 col-sm-6 col-6">
+        <a href="calculator.html" class="calculator__block">
+          <p class="calculator__model">XR</p>
+        </a>
+      </div>
+      <div class="calculator__row-wrapper col-md-3 col-sm-6 col-6">
+        <a href="calculator.html" class="calculator__block">
+          <p class="calculator__model">XS Max</p>
+        </a>
+      </div>
+      <div class="calculator__row-wrapper col-md-3 col-sm-6 col-6">
+        <a href="calculator.html" class="calculator__block">
+          <p class="calculator__model">XS</p>
+        </a>
+      </div>
+      <div class="calculator__row-wrapper col-md-3 col-sm-6 col-6">
+        <a href="calculator.html" class="calculator__block">
+          <p class="calculator__model">X</p>
+        </a>
+      </div>
+      <div class="calculator__row-wrapper col-md-3 col-sm-6 col-6">
+        <a href="calculator.html" class="calculator__block">
+          <p class="calculator__model">8 Plus</p>
+        </a>
+      </div>
+      <div class="calculator__row-wrapper col-md-3 col-sm-6 col-6">
+        <a href="calculator.html" class="calculator__block">
+          <p class="calculator__model">8</p>
+        </a>
+      </div>
+      <div class="calculator__row-wrapper col-md-3 col-sm-6 col-6">
+        <a href="calculator.html" class="calculator__block">
+          <p class="calculator__model">7 Plus</p>
+        </a>
+      </div>
+      <div class="calculator__row-wrapper col-md-3 col-sm-6 col-6">
+        <a href="calculator.html" class="calculator__block">
+          <p class="calculator__model">7</p>
+        </a>
+      </div>
+      <div class="calculator__row-wrapper col-md-3 col-sm-6 col-6">
+        <a href="calculator.html" class="calculator__block">
+          <p class="calculator__model">6S Plus</p>
+        </a>
+      </div>
+      <div class="calculator__row-wrapper col-md-3 col-sm-6 col-6">
+        <a href="calculator.html" class="calculator__block">
+          <p class="calculator__model">6S</p>
+        </a>
+      </div>
+      <div class="calculator__row-wrapper col-md-3 col-sm-6 col-6">
+        <a href="calculator.html" class="calculator__block">
+          <p class="calculator__model">6 Plus</p>
+        </a>
+      </div>
+      <div class="calculator__row-wrapper col-md-3 col-sm-6 col-6">
+        <a href="calculator.html" class="calculator__block">
+          <p class="calculator__model">6</p>
+        </a>
+      </div>
+      <div class="calculator__row-wrapper col-md-3 col-sm-6 col-6">
+        <a href="calculator.html" class="calculator__block">
+          <p class="calculator__model">SE</p>
+        </a>
+      </div>
+      <div class="calculator__row-wrapper col-md-3 col-sm-6 col-6">
+        <a href="calculator.html" class="calculator__block">
+          <p class="calculator__model">5S / 5C / 5</p>
+        </a>
+      </div>
+      <div class="calculator__row-wrapper col-md-3 col-sm-6 col-6">
+        <a href="calculator.html" class="calculator__block">
+          <p class="calculator__model">4S / 4</p>
+        </a>
+      </div>
+      <div class="calculator__row-wrapper calculator__row-wrapper_empty col-md-3">
+        <a href="calculator.html" class="calculator__block calculator__block_empty">
+        </a>
+      </div>
+      <div class="calculator__row-wrapper  calculator__row-wrapper_empty col-md-3">
+        <a href="calculator.html" class="calculator__block calculator__block_empty">
+          <p></p>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+<aside class="promo promo_black">
+  <div class="container">
+    <div class="row promo__row">
+      <div class="promo__side promo__side_left">
+        <h3 class="promo__text">
+          Только при заказе сегодня - <br>
+          <strong>наклейка защитного стекла в подарок!</strong>
+        </h3>
+        <p class="promo__motivate">Оставьте заявку, чтобы получить подарок</p>
+        <form class="promo__form form-inline">
+          <div class="form-group">
+            <input type="text" class="form-control promo__input promo__input" id="inputPassword" placeholder="Ваше имя"
+                   required>
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control promo__input" id="inputEmail" placeholder="Ваш телефон" required>
+          </div>
+          <button type="submit" class="btn promo__submit">получить</button>
+        </form>
+      </div>
+      <div class="promo__side promo__side_right">
+        <div class="promo__image jq-hidden">
+          <img src="images/416139.970-min.png">
+        </div>
+      </div>
+    </div>
+  </div>
+</aside>
+<section class="block about" id="about">
+  <div class="container">
+    <header class="section__header">Сервисный центр re:Mac</header>
+    <p class="about__description">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit
+      amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et
+      magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus
+      mollis orci, sed rhoncus sapien nunc eget.
+    </p>
+    <div class="about__gallery">
+      <div class="swiper-container gallery-thumbs">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" style="background-image:url(images/large_IMG_1543_big_копия_3.png)"></div>
+          <div class="swiper-slide" style="background-image:url(images/large_IMG_1543_big_копия_3.png)"></div>
+          <div class="swiper-slide" style="background-image:url(images/large_IMG_1543_big_копия_3.png)"></div>
+          <div class="swiper-slide" style="background-image:url(images/large_IMG_1543_big_копия_3.png)"></div>
+          <div class="swiper-slide" style="background-image:url(images/large_IMG_1543_big_копия_3.png)"></div>
+          <div class="swiper-slide" style="background-image:url(images/large_IMG_1543_big_копия_3.png)"></div>
+          <div class="swiper-slide" style="background-image:url(images/large_IMG_1543_big_копия_3.png)"></div>
+          <div class="swiper-slide" style="background-image:url(images/large_IMG_1543_big_копия_3.png)"></div>
+          <div class="swiper-slide" style="background-image:url(images/large_IMG_1543_big_копия_3.png)"></div>
+          <div class="swiper-slide" style="background-image:url(images/large_IMG_1543_big_копия_3.png)"></div>
+          <div class="swiper-slide" style="background-image:url(images/large_IMG_1543_big_копия_3.png)"></div>
+          <div class="swiper-slide" style="background-image:url(images/large_IMG_1543_big_копия_3.png)"></div>
+        </div>
+      </div>
+      <div class="swiper-container gallery">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" style="background-image:url(images/large_IMG_1543_big-min.jpg)"></div>
+          <div class="swiper-slide" style="background-image:url(images/large_IMG_1543_big-min.jpg)"></div>
+          <div class="swiper-slide" style="background-image:url(images/large_IMG_1543_big-min.jpg)"></div>
+          <div class="swiper-slide" style="background-image:url(images/large_IMG_1543_big-min.jpg)"></div>
+          <div class="swiper-slide" style="background-image:url(images/large_IMG_1543_big-min.jpg)"></div>
+          <div class="swiper-slide" style="background-image:url(images/large_IMG_1543_big-min.jpg)"></div>
+          <div class="swiper-slide" style="background-image:url(images/large_IMG_1543_big-min.jpg)"></div>
+          <div class="swiper-slide" style="background-image:url(images/large_IMG_1543_big-min.jpg)"></div>
+          <div class="swiper-slide" style="background-image:url(images/large_IMG_1543_big-min.jpg)"></div>
+          <div class="swiper-slide" style="background-image:url(images/large_IMG_1543_big-min.jpg)"></div>
+          <div class="swiper-slide" style="background-image:url(images/large_IMG_1543_big-min.jpg)"></div>
+          <div class="swiper-slide" style="background-image:url(images/large_IMG_1543_big-min.jpg)"></div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</section>
+<section class="block team">
+  <div class="container">
+    <div class="row">
+      <div class="team__side team__side_left col-md-6">
+        <div class="team__image jq-hidden jq-hidden_left">
+          <img src="images/team.png" alt="Команда">
+        </div>
+      </div>
+      <div class="team__side team__side_right col-md-6">
+        <header class="section__header">
+          Команда re:Mac
+        </header>
+        <div class="team__text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor
+          sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus
+          et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis
+          tellus mollis orci, sed rhoncus sapien nunc eget.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="block profies">
+  <div class="container">
+    <header class="section__header">Только опытные инженеры re:Mac</header>
+    <header class="section__subheader">Каждый специалист проходит тщательный отбор и имеет опыт работы от 3-х лет
+    </header>
+    <div class="profies__gallery">
+      <!-- Swiper -->
+      <div class="profies__swiper swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="swiper-slide-image" style="background-image: url(images/nazarov-600-min.jpg)">
+            </div>
+            <p class="swiper-slide-name"> Игорь Вишневский (26 лет)
+            </p>
+            <p class="swiper-slide-text">Работает в re:Mac c 2009 года</p>
+          </div>
+          <div class="swiper-slide">
+            <div class="swiper-slide-image"
+                 style="background-image: url(images/1776e1a37f314ff8f12c5abbadc0e4fc-min.jpg)">
+            </div>
+            <p class="swiper-slide-name"> Игорь Вишневский (26 лет)
+            </p>
+            <p class="swiper-slide-text">Работает в re:Mac c 2009 года</p>
+          </div>
+          <div class="swiper-slide">
+            <div class="swiper-slide-image"
+                 style="background-image: url(images/5d0b893c980cb135ce5ee508305ae74f-min.jpg)">
+            </div>
+            <p class="swiper-slide-name"> Игорь Вишневский (26 лет)
+            </p>
+            <p class="swiper-slide-text">Работает в re:Mac c 2009 года</p>
+          </div>
+          <div class="swiper-slide">
+            <div class="swiper-slide-image" style="background-image: url(images/nazarov-600-min.jpg)">
+            </div>
+            <p class="swiper-slide-name"> Игорь Вишневский (26 лет)
+            </p>
+            <p class="swiper-slide-text">Работает в re:Mac c 2009 года</p>
+          </div>
+          <div class="swiper-slide">
+            <div class="swiper-slide-image"
+                 style="background-image: url(images/1776e1a37f314ff8f12c5abbadc0e4fc-min.jpg)">
+            </div>
+            <p class="swiper-slide-name"> Игорь Вишневский (26 лет)
+            </p>
+            <p class="swiper-slide-text">Работает в re:Mac c 2009 года</p>
+          </div>
+          <div class="swiper-slide">
+            <div class="swiper-slide-image"
+                 style="background-image: url(images/5d0b893c980cb135ce5ee508305ae74f-min.jpg)">
+            </div>
+            <p class="swiper-slide-name"> Игорь Вишневский (26 лет)
+            </p>
+            <p class="swiper-slide-text">Работает в re:Mac c 2009 года</p>
+          </div>
+        </div>
+      </div>
+      <!-- Add Arrows -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+  </div>
+</section>
+<section class="block summary">
+  <div class="container">
+    <header class="section__header">За последний месяц мы отремонтировали:</header>
+    <div class="row summary__row">
+      <div class="summary__block col-md-3 col-sm-6 col-6 jq-hidden">
+        <p class="summary__value">115</p>
+        <p class="summary__model">Ipad XR</p>
+        <div class="summary__image">
+          <img src="images/11324_big-min.png" alt="Model">
+        </div>
+      </div>
+      <div class="summary__block col-md-3 col-sm-6 col-6 jq-hidden">
+        <p class="summary__value">26</p>
+        <p class="summary__model">Ipad XI</p>
+        <div class="summary__image">
+          <img src="images/ipad-pro11-silver-min.png" alt="Model">
+        </div>
+      </div>
+      <div class="summary__block col-md-3 col-sm-6 col-6 jq-hidden">
+        <p class="summary__value">68</p>
+        <p class="summary__model">Ipad 7</p>
+        <div class="summary__image">
+          <img src="images/ipad-wifi-select-spacegray-201703_GEO_RU-500x500-min.png" alt="Model">
+        </div>
+      </div>
+      <div class="summary__block col-md-3 col-sm-6 col-6 jq-hidden">
+        <p class="summary__value">102</p>
+        <p class="summary__model">Ipad 6</p>
+        <div class="summary__image">
+          <img src="images/ipad-wifi-select-silver-201703_GEO_RU-500x500-min.png" alt="Model">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<aside class="promo promo_blue">
+  <div class="container">
+    <div class="row promo__row">
+      <div class="promo__side promo__side_left">
+        <h3 class="promo__text">
+          <span class="promo__text promo__text_pink">Скидка 25%</span> на ремонт планшета<br>
+          <strong>При заказе с сайта до конца текущего месяца</strong>
+        </h3>
+        <p class="promo__motivate">Оставьте заявку, чтобы успеть сэкономить на ремонте телефона</p>
+        <form class="promo__form form-inline">
+          <div class="form-group">
+            <input type="text" class="form-control promo__input promo__input" id="inputPassword1" placeholder="Ваше имя"
+                   required>
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control promo__input" id="inputEmail1" placeholder="Ваш телефон" required>
+          </div>
+          <button type="submit" class="btn promo__submit">получить</button>
+        </form>
+      </div>
+      <div class="promo__side promo__side_right">
+        <div class="promo__image jq-hidden">
+          <img src="images/img3-min.png">
+        </div>
+      </div>
+    </div>
+  </div>
+</aside>
+<section id="garantee" class="block garantee">
+  <div class="container">
+    <header class="section__header">Мы - за честность!</header>
+    <header class="section__subheader">Ремонтируем неисправности любой сложности с гарантией от года</header>
+    <div class="row garantee__row">
+      <article class="garantee__block col-md-4 col-sm-12">
+        <div class="garantee__image" style="background-image: url(images/vitti-guarantee-list-min.jpg)"></div>
+        <h3 class="garantee__header">Фирменная гарантия на <br>ремонт и запчасти</h3>
+        <p class="garantee__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum
+          laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.</p>
+      </article>
+      <article class="garantee__block col-md-4 col-sm-12">
+        <div class="garantee__image"
+             style="background-image: url(images/0b3062ef2c8425b97922cca8ea65283a-min.jpg)"></div>
+        <h3 class="garantee__header">Используем только <br>
+          оригинальные запчасти</h3>
+        <p class="garantee__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum
+          laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.</p>
+      </article>
+      <article class="garantee__block col-md-4 col-sm-12">
+        <div class="garantee__image" style="background-image: url(images/j5t3vc008lwss0sgccwgsssgo4wgsk-min.jpg)"></div>
+        <h3 class="garantee__header">Несем полную <br>
+          ответственность за результат</h3>
+        <p class="garantee__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum
+          laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+<section class="block steps">
+  <div class="container">
+    <header class="section__header">
+      Этапы работы с нами
+    </header>
+    <div class="row steps__row">
+      <div class="steps__block">
+        <div class="steps__icon"></div>
+        <div class="btn">Оставьте завку</div>
+        <p class="steps__text">Мы свяжемся с Вами в
+          течение 5 минут</p>
+      </div>
+      <div class="steps__block">
+        <div class="steps__icon"></div>
+        <h3 class="steps__header">Бесплатная
+          диагностика</h3>
+        <p class="steps__text">Мы свяжемся с Вами в
+          течение 5 минут</p>
+      </div>
+      <div class="steps__block">
+        <div class="steps__icon"></div>
+        <h3 class="steps__header">Утверждение
+          стоимости</h3>
+        <p class="steps__text">Определим точную
+          стоимость работ и
+          утвердим её с Вами</p>
+      </div>
+      <div class="steps__block">
+        <div class="steps__icon"></div>
+        <h3 class="steps__header">Ремонт и
+          проверка</h3>
+        <p class="steps__text">Быстрая помощь на месте или сложный ремонт
+          в мастерской.
+          Обязательное тестиро&shy;вание Вашего устройства после ремонта</p>
+      </div>
+      <div class="steps__block">
+        <div class="steps__icon"></div>
+        <h3 class="steps__header">Оплата и <br>
+          гарантия</h3>
+        <p class="steps__text">Бесплатная доставка заказа на дом, проверка и принятие работы, оплата</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+<section id="feedbacks" class="block feedbacks">
+  <div class="container text-center">
+    <header class="section__header">Отзывы наших клиентов</header>
+    <div class="feedbacks__gallery">
+      <!-- Swiper -->
+      <div class="feedbacks_swiper swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide d-flex">
+            <div class="feedback__image" style="background-image: url(images/default-min.jpg)"></div>
+            <div class="feedback__text">
+              <div class="d-flex justify-content-between align-items-baseline">
+                <p class="feedback__name">Виктор Николаевич</p>
+                <p class="feedback__date">23.12.2019</p>
+              </div>
+              <p class="feedback__age">45 Лет</p>
+              <p class="feedback__content">Не следует, однако забывать, что укрепление и развитие структуры представляет
+                собой интересный эксперимент проверки новых предложений. Товарищи! новая модель организационной
+                деятельности в значительной степени обуславливает создание модели развития. Таким образом сложившаяся
+                структура организации позволяет оценить значение форм развития.</p>
+            </div>
+
+          </div>
+          <div class="swiper-slide d-flex">
+            <div class="feedback__image" style="background-image: url(images/default-min.jpg)"></div>
+            <div class="feedback__text">
+              <div class="d-flex justify-content-between align-items-baseline">
+                <p class="feedback__name">Виктор Николаевич</p>
+                <p class="feedback__date">23.12.2019</p>
+              </div>
+              <p class="feedback__age">45 Лет</p>
+              <p class="feedback__content">Не следует, однако забывать, что укрепление и развитие структуры представляет
+                собой интересный эксперимент проверки новых предложений. Товарищи! новая модель организационной
+                деятельности в значительной степени обуславливает создание модели развития. Таким образом сложившаяся
+                структура организации позволяет оценить значение форм развития.</p>
+            </div>
+
+          </div>
+          <div class="swiper-slide d-flex">
+            <div class="feedback__image" style="background-image: url(images/default-min.jpg)"></div>
+            <div class="feedback__text">
+              <div class="d-flex justify-content-between align-items-baseline">
+                <p class="feedback__name">Виктор Николаевич</p>
+                <p class="feedback__date">23.12.2019</p>
+              </div>
+              <p class="feedback__age">45 Лет</p>
+              <p class="feedback__content">Не следует, однако забывать, что укрепление и развитие структуры представляет
+                собой интересный эксперимент проверки новых предложений. Товарищи! новая модель организационной
+                деятельности в значительной степени обуславливает создание модели развития. Таким образом сложившаяся
+                структура организации позволяет оценить значение форм развития.</p>
+            </div>
+
+          </div>
+          <div class="swiper-slide d-flex">
+            <div class="feedback__image" style="background-image: url(images/default-min.jpg)"></div>
+            <div class="feedback__text">
+              <div class="d-flex justify-content-between align-items-baseline">
+                <p class="feedback__name">Виктор Николаевич</p>
+                <p class="feedback__date">23.12.2019</p>
+              </div>
+              <p class="feedback__age">45 Лет</p>
+              <p class="feedback__content">Не следует, однако забывать, что укрепление и развитие структуры представляет
+                собой интересный эксперимент проверки новых предложений. Товарищи! новая модель организационной
+                деятельности в значительной степени обуславливает создание модели развития. Таким образом сложившаяся
+                структура организации позволяет оценить значение форм развития.</p>
+            </div>
+
+          </div>
+          <div class="swiper-slide d-flex">
+            <div class="feedback__image" style="background-image: url(images/default-min.jpg)"></div>
+            <div class="feedback__text">
+              <div class="d-flex justify-content-between align-items-baseline">
+                <p class="feedback__name">Виктор Николаевич</p>
+                <p class="feedback__date">23.12.2019</p>
+              </div>
+              <p class="feedback__age">45 Лет</p>
+              <p class="feedback__content">Не следует, однако забывать, что укрепление и развитие структуры представляет
+                собой интересный эксперимент проверки новых предложений. Товарищи! новая модель организационной
+                деятельности в значительной степени обуславливает создание модели развития. Таким образом сложившаяся
+                структура организации позволяет оценить значение форм развития.</p>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+      <!-- Add Arrows -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+    <button class="btn btn_blue">Оставить мой отзыв</button>
+  </div>
+</section>
+<aside class="promo promo_black promo_bg">
+  <div class="container">
+    <div class="row promo__row">
+      <div class="promo__side promo__side_left">
+        <h3 class="promo__text">
+          Доверьте ремонт Вашего Ipad <br>
+          <strong>профессионалам!</strong>
+        </h3>
+        <p class="promo__motivate">Оставьте заявку на ремонт, чтобы получить бесплатную диагностику мастера</p>
+        <form class="promo__form form-inline">
+          <div class="form-group">
+            <input type="text" class="form-control promo__input promo__input" id="inputPassword2" placeholder="Ваше имя"
+                   required>
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control promo__input" id="inputEmail2" placeholder="Ваш телефон" required>
+          </div>
+          <button type="submit" class="btn promo__submit">оставить заявку</button>
+        </form>
+      </div>
+      <div class="promo__side promo__side_right">
+
+      </div>
+    </div>
+  </div>
+</aside>
+<section class="block contacts">
+  <div class="contacts__row d-flex">
+    <div class="contacts__map">
+
+    </div>
+    <div class="contacts__content">
+      <header class="section__header">
+        Контакты
+      </header>
+      <div class="contacts__items">
+        <p class="contacts__item contacts__item_address">Москва Московская 24 офис 532 кв 22</p>
+        <a class="contacts__item contacts__item_email" href="mailto:re@mac.ru">re@mac.ru</a>
+        <p class="contacts__item contacts__item_tax">ИНН:5474754556565678</p>
+        <p class="contacts__item contacts__item_reg">ОГРН:5474754556565678</p>
+        <a class="contacts__item contacts__item_phone" href="tel:+78129954457">8 (812) 995-44-57</a>
+      </div>
+    </div>
+  </div>
+</section>
+<footer class="footer">
+  <div class="container d-flex justify-content-between align-items-center">
+    <a class="navbar__logo" href="index.html">
+      <div class="navbar__logo-img"></div>
+      <div class="navbar__logo-text">Срочный ремонт<br>
+        Apple Ipad
+      </div>
+    </a>
+    <div class="navbar__contacts navbar__contacts_footer">
+      <div class="navbar__contacts-block navbar__contacts-block_footer">
+        <p class="navbar__contact navbar__contact_address">Авиаконструкторов, д.2</p>
+      </div>
+      <div class="navbar__contacts-block navbar__contacts-block_footer">
+        <a class="navbar__contact navbar__contact_phone" href="tel:+78129954457">8 (812) 995-44-57</a>
+      </div>
+      <div class="navbar__contacts-block navbar__contacts-block_footer">
+        <a class="navbar__contact navbar__contact_email" href="mailto:remac78@inbox.ru">remac78@inbox.ru</a>
+      </div>
+      <div class="navbar__contacts-block navbar__contacts-block_footer">
+        <button class="btn" data-toggle="modal" data-target="#contactForm">Связаться с нами</button>
+      </div>
+    </div>
+  </div>
+  <div class="container d-flex justify-content-center align-items-center mt-3">
+    <a href="#" class="footer__policy">Политика конфиденциальности</a>
+    <div class="footer__develop">
+      <p class="footer__develop-text">Сайт разработан в - </p>
+      <a href="#" class="footer__develop-link"><img class="footer__develop-logo" src="images/logo-min.png"
+                                                    alt="Лого"></a>
+    </div>
+  </div>
+</footer>
+<div id="contactForm" class="contact__form modal jq-hidden jq-hidden_fast" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="modal__close" data-dismiss="modal" aria-label="Close">
+        </button>
+        <h5 class="modal-title">Связь с нами</h5>
+      </div>
+      <div class="modal-body">
+        <p>Заполните форму ниже и мы перезвоним Вам через 5 минут</p>
+        <form class="modal__form">
+          <div class="form-group">
+            <input type="text" class="form-control" id="exampleInputText1"
+                   placeholder="Ваше имя">
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" id="exampleInputPhone1" placeholder="Ваш телефон">
+          </div>
+          <button type="submit" class="btn">связаться с нами</button>
+        </form>
+        <p class="modal__agree">
+          Нажимая кнопку «Связаться с нами» Вы соглашаетесь на обработку <br>
+          Ваших персональных данных
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal__success contact__form modal jq-hidden jq-hidden_fast" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="modal__close" data-dismiss="modal" aria-label="Close">
+        </button>
+        <h5 class="modal-title">Спасибо!</h5>
+      </div>
+      <div class="modal-body">
+        <p>Мы перезвоним Вам через 5 минут</p>
+        <button class="btn" data-dismiss="modal" aria-label="Close">ОК</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCmO9VYZKDYm7vbqNcFZeC66PQUvQjqojs&callback=initMap"
+        async defer></script>
+<script src="js/main.min.js"></script>
+<script>
+    var galleryThumbs = new Swiper('.gallery-thumbs', {
+        spaceBetween: 10,
+        slidesPerView: 6,
+        freeMode: true,
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
+    });
+    var gallery = new Swiper('.gallery', {
+        spaceBetween: 10,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        thumbs: {
+            swiper: galleryThumbs
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+    });
+    var profiesSwiper = new Swiper('.profies__swiper', {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        centeredSlides: true,
+        slidesPerGroup: 1,
+        loop: true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+            },
+            576: {
+                slidesPerView: 1,
+            },
+            768: {
+                slidesPerView: 2,
+            },
+            1024: {
+                slidesPerView: 3,
+            },
+        }
+    });
+    var feedbacksSwiper = new Swiper('.feedbacks_swiper', {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+
+</script>
+</body>
+</html>
