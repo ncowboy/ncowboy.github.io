@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>RE:MAC - Срочный ремонт Apple Ipad</title>
   <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/lightbox.min.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
@@ -275,18 +276,30 @@
       </div>
       <div class="swiper-container gallery">
         <div class="swiper-wrapper">
-          <div class="swiper-slide" style="background-image:url(images/large_IMG_1543_big-min.jpg)"></div>
-          <div class="swiper-slide" style="background-image:url(images/large_IMG_1543_big-min.jpg)"></div>
-          <div class="swiper-slide" style="background-image:url(images/large_IMG_1543_big-min.jpg)"></div>
-          <div class="swiper-slide" style="background-image:url(images/large_IMG_1543_big-min.jpg)"></div>
-          <div class="swiper-slide" style="background-image:url(images/large_IMG_1543_big-min.jpg)"></div>
-          <div class="swiper-slide" style="background-image:url(images/large_IMG_1543_big-min.jpg)"></div>
-          <div class="swiper-slide" style="background-image:url(images/large_IMG_1543_big-min.jpg)"></div>
-          <div class="swiper-slide" style="background-image:url(images/large_IMG_1543_big-min.jpg)"></div>
-          <div class="swiper-slide" style="background-image:url(images/large_IMG_1543_big-min.jpg)"></div>
-          <div class="swiper-slide" style="background-image:url(images/large_IMG_1543_big-min.jpg)"></div>
-          <div class="swiper-slide" style="background-image:url(images/large_IMG_1543_big-min.jpg)"></div>
-          <div class="swiper-slide" style="background-image:url(images/large_IMG_1543_big-min.jpg)"></div>
+          <a href="images/large_IMG_1543_big-min.jpg" data-lightbox="image" class="swiper-slide"
+             style="background-image:url(images/large_IMG_1543_big-min.jpg)"></a>
+          <a href="images/large_IMG_1543_big-min.jpg" data-lightbox="image" class="swiper-slide"
+             style="background-image:url(images/large_IMG_1543_big-min.jpg)"></a>
+          <a href="images/large_IMG_1543_big-min.jpg" data-lightbox="image" class="swiper-slide"
+             style="background-image:url(images/large_IMG_1543_big-min.jpg)"></a>
+          <a href="images/large_IMG_1543_big-min.jpg" data-lightbox="image" class="swiper-slide"
+             style="background-image:url(images/large_IMG_1543_big-min.jpg)"></a>
+          <a href="images/large_IMG_1543_big-min.jpg" data-lightbox="image" class="swiper-slide"
+             style="background-image:url(images/large_IMG_1543_big-min.jpg)"></a>
+          <a href="images/large_IMG_1543_big-min.jpg" data-lightbox="image" class="swiper-slide"
+             style="background-image:url(images/large_IMG_1543_big-min.jpg)"></a>
+          <a href="images/large_IMG_1543_big-min.jpg" data-lightbox="image" class="swiper-slide"
+             style="background-image:url(images/large_IMG_1543_big-min.jpg)"></a>
+          <a href="images/large_IMG_1543_big-min.jpg" data-lightbox="image" class="swiper-slide"
+             style="background-image:url(images/large_IMG_1543_big-min.jpg)"></a>
+          <a href="images/large_IMG_1543_big-min.jpg" data-lightbox="image" class="swiper-slide"
+             style="background-image:url(images/large_IMG_1543_big-min.jpg)"></a>
+          <a href="images/large_IMG_1543_big-min.jpg" data-lightbox="image" class="swiper-slide"
+             style="background-image:url(images/large_IMG_1543_big-min.jpg)"></a>
+          <a href="images/large_IMG_1543_big-min.jpg" data-lightbox="image" class="swiper-slide"
+             style="background-image:url(images/large_IMG_1543_big-min.jpg)"></a>
+          <a href="images/large_IMG_1543_big-min.jpg" data-lightbox="image" class="swiper-slide"
+             style="background-image:url(images/large_IMG_1543_big-min.jpg)"></a>
         </div>
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
@@ -481,7 +494,7 @@
     <div class="row steps__row">
       <div class="steps__block">
         <div class="steps__icon"></div>
-        <div class="btn">Оставьте завку</div>
+        <button class="btn" data-toggle="modal" data-target="#contactForm">Оставьте завку</button>
         <p class="steps__text">Мы свяжемся с Вами в
           течение 5 минут</p>
       </div>
@@ -607,7 +620,7 @@
       <div class="swiper-button-next"></div>
       <div class="swiper-button-prev"></div>
     </div>
-    <button class="btn btn_blue">Оставить мой отзыв</button>
+    <button class="btn btn_blue" data-toggle="modal" data-target="#feedbackForm">Оставить мой отзыв</button>
   </div>
 </section>
 <aside class="promo promo_black promo_bg">
@@ -715,6 +728,37 @@
     </div>
   </div>
 </div>
+<div id="feedbackForm" class="contact__form modal jq-hidden jq-hidden_fast" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="modal__close" data-dismiss="modal" aria-label="Close">
+        </button>
+        <h5 class="modal-title">Связь с нами</h5>
+      </div>
+      <div class="modal-body">
+        <p>Заполните форму ниже и мы перезвоним Вам через 5 минут</p>
+        <form class="modal__form">
+          <div class="form-group">
+            <input type="text" class="form-control" id="exampleInputText2"
+                   placeholder="Ваше имя">
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" id="exampleInputPhone2" placeholder="Ваш телефон">
+          </div>
+          <div class="form-group">
+            <textarea class="form-control" id="textarea" placeholder="Ваш отзыв"> </textarea>
+          </div>
+          <button type="submit" class="btn">связаться с нами</button>
+        </form>
+        <p class="modal__agree">
+          Нажимая кнопку «Связаться с нами» Вы соглашаетесь на обработку <br>
+          Ваших персональных данных
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
 <div class="modal__success contact__form modal jq-hidden jq-hidden_fast" tabindex="-1" role="dialog">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -733,6 +777,7 @@
 <script src="js/jquery-3.4.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/swiper.min.js"></script>
+<script src="js/lightbox.min.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCmO9VYZKDYm7vbqNcFZeC66PQUvQjqojs&callback=initMap"
         async defer></script>
 <script src="js/main.min.js"></script>
@@ -793,6 +838,13 @@
         },
     });
 
+</script>
+<script>
+  lightbox.option({
+    'resizeDuration': 200,
+    'wrapAround': true,
+    'showImageNumberLabel': false
+  })
 </script>
 </body>
 </html>
