@@ -1,380 +1,392 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Расчёт затухания в сборке кабельной</title>
-  <meta charset="UTF-8">
+    <title>Расчёт затухания в сборке кабельной</title>
+    <meta charset="UTF-8">
 </head>
 <div>
-  <div>
-    <form name="form1">
-      <table class="calc" style="height: 895px;">
-        <tbody>
-        <tr style="height: 43px;">
-          <th colspan="4" style="height: 43px;">
-            <p style="text-align: center;"><span style="color: #ff6600;">Расчёт затухания сигнала в коаксиальном кабеле</span>
-            </p>
-          </th>
-        </tr>
-        <tr style="height: 23px;">
-          <td colspan="4" style="height: 23px;">
-            <div style="background-color: #ff6600; height: 5px; margin: 5px 5px;">&nbsp;</div>
-          </td>
-        </tr>
-        <tr style="height: 45px;">
-          <td rowspan="2" style="height: 90px;">
-            <p style="text-align: left; margin-left: 40px;">Тип кабеля:</p>
-          </td>
-          <td style="height: 45px;">
-            <p style="text-align: right;">Фазостабильный кабель</p>
-          </td>
-          <td style="width: 5%;">
-            <p><input id="rus" name="count" onclick="CableType()" type="radio"/></p>
-          </td>
-          <td rowspan="2" style="width: 35%;">
-            <p style="text-align: left"><select id="ltype" name="ltype" style="width:235px"> </select></p>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <p style="text-align: right;">Высокочастотный кабель</p>
-          </td>
-          <td style="width: 5%; height: 45px;">
-            <p><input checked="checked" name="count" onclick="CableType()" type="radio"/></p>
-          </td>
-        </tr>
-        <tr style="height: 49px;">
-          <td colspan="3" style="height: 49px;">
-            <p style="margin-left: 40px; text-align: right;">Длина кабеля, м:</p>
-          </td>
-          <td style="height: 49px;">
-            <p style="text-align: left;"><input maxlength="10" name="len" size="10" type="text" value="1"/>&nbsp;
-            </p>
-          </td>
-        </tr>
-        <tr style="height: 23px;">
-          <td colspan="4" style="height: 23px;">
-            <div style="background-color: #ff6600; height: 5px; margin: 5px 5px;">&nbsp;</div>
-          </td>
-        </tr>
-        <tr style="height: 63px;">
-          <td rowspan="2" style="height: 108px;">
-            <p style="text-align: left; margin-left: 40px;">Разъем 1:</p>
-          </td>
-          <td style="height: 63px;">
-            <p style="text-align: right;">Прецизионный разъем из стали нержавеющей</p>
-          </td>
-          <td style="width: 5%; height: 63px;">
-            <p><input id="precizion1" name="razem1" type="radio"/></p>
-          </td>
-          <td rowspan="2" style="width: 35%; height: 108px;"></td>
-        </tr>
-        <tr style="height: 45px;">
-          <td style="height: 45px;">
-            <p style="text-align: right;">ВЧ/СВЧ Разъем</p>
-          </td>
-          <td style="width: 5%; height: 45px;">
-            <p><input checked="checked" name="razem1" type="radio"/></p>
-          </td>
-        </tr>
-        <tr style="height: 45px;">
-          <td rowspan="2" style="height: 90px;">
-            <p style="text-align: right; margin-left: 40px;">Конструктив разъема:</p>
-          </td>
-          <td style="height: 45px;">
-            <p style="text-align: right;">Прямой</p>
-          </td>
-          <td style="width: 5%; height: 45px;">
-            <p><input id="prjamoy1" name="konstruktiv1" type="radio"/></p>
-          </td>
-        </tr>
-        <tr style="height: 45px;">
-          <td style="height: 45px;">
-            <p style="text-align: right;">Угловой</p>
-          </td>
-          <td style="width: 5%; height: 45px;">
-            <p><input checked="checked" name="konstruktiv1" type="radio"/></p>
-          </td>
-        </tr>
-        <tr style="height: 23px;">
-          <td colspan="4" style="height: 23px;">
-            <div style="background-color: #ff6600; height: 5px; margin: 5px 5px;">&nbsp;</div>
-          </td>
-        </tr>
-        <tr style="height: 63px;">
-          <td rowspan="2" style="height: 108px;">
-            <p style="text-align: left; margin-left: 40px;">Разъем 2:</p>
-          </td>
-          <td style="height: 63px;">
-            <p style="text-align: right;">Прецизионный разъем из стали нержавеющей</p>
-          </td>
-          <td style="width: 5%; height: 63px;">
-            <p><input id="precizion2" name="razem2" type="radio"/></p>
-          </td>
-          <td rowspan="2" style="width: 35%; height: 108px;"></td>
-        </tr>
-        <tr style="height: 45px;">
-          <td style="height: 45px;">
-            <p style="text-align: right;">ВЧ/СВЧ Разъем</p>
-          </td>
-          <td style="width: 5%; height: 45px;">
-            <p><input checked="checked" name="razem2" type="radio"/></p>
-          </td>
-        </tr>
-        <tr style="height: 45px;">
-          <td rowspan="2" style="height: 90px;">
-            <p style="text-align: right; margin-left: 40px;">Конструктив разъема:</p>
-          </td>
-          <td style="height: 45px;">
-            <p style="text-align: right;">Прямой</p>
-          </td>
-          <td style="width: 5%; height: 45px;">
-            <p><input id="prjamoy2" name="konstruktiv2" type="radio"/></p>
-          </td>
-        </tr>
-        <tr style="height: 45px;">
-          <td style="height: 45px;">
-            <p style="text-align: right;">Угловой</p>
-          </td>
-          <td style="width: 5%; height: 45px;">
-            <p><input checked="checked" name="konstruktiv2" type="radio"/></p>
-          </td>
-        </tr>
-        <tr style="height: 23px;">
-          <td colspan="4" style="height: 23px;">
-            <div style="background-color: #ff6600; height: 5px; margin: 5px 5px;">&nbsp;</div>
-          </td>
-        </tr>
-        <tr style="height: 49px;">
-          <td colspan="3" style="height: 49px;">
-            <p style="text-align: left; margin-left: 40px;">Частота сигнала (МГц):</p>
-          </td>
-          <td style="height: 49px;">
-            <p style="text-align: left;"><input type="number" min=1 max=maxGHz maxlength="6" name="freq"
-                                                size="10" value="1"/></p>
-          </td>
-        </tr>
-        <tr style="height: 23px;">
-          <td colspan="4" style="height: 23px;">
-            <div style="background-color: #ff6600; height: 5px; margin: 5px 5px;">&nbsp;</div>
-          </td>
-        </tr>
-        <tr style="height: 49px;">
-          <td colspan="3" style="height: 49px;">
-            <p style="text-align: left; margin-left: 40px;">Общее затухание в кабельной сборке, дБ не
-              более:</p>
-          </td>
-          <td style="height: 49px;">
-            <p style="text-align: left;"><input maxlength="10" name="mldb" readonly="readonly" size="10"
-                                                type="text"/></p>
-          </td>
-        </tr>
-        <tr style="height: 23px;">
-          <td colspan="4" style="height: 23px;">
-            <div style="background-color: #ff6600; height: 5px; margin: 5px 5px;">&nbsp;</div>
-          </td>
-        </tr>
-        <tr style="height: 81px;">
-          <td colspan="4" height="35" style="height: 81px;">
+    <div>
+        <form name="form1">
+            <table class="calc" style="height: 895px;">
+                <tbody>
+                <tr style="height: 43px;">
+                    <th colspan="4" style="height: 43px;">
+                        <p style="text-align: center;"><span style="color: #ff6600;">Расчёт затухания сигнала в коаксиальном кабеле</span>
+                        </p>
+                    </th>
+                </tr>
+                <tr style="height: 23px;">
+                    <td colspan="4" style="height: 23px;">
+                        <div style="background-color: #ff6600; height: 5px; margin: 5px 5px;">&nbsp;</div>
+                    </td>
+                </tr>
+                <tr style="height: 45px;">
+                    <td rowspan="2" style="height: 90px;">
+                        <p style="text-align: left; margin-left: 40px;">Тип кабеля:</p>
+                    </td>
+                    <td style="height: 45px;">
+                        <p style="text-align: right;">Фазостабильный кабель</p>
+                    </td>
+                    <td style="width: 5%;">
+                        <p><input id="rus" name="count" onclick="CableType()" type="radio"/></p>
+                    </td>
+                    <td rowspan="2" style="width: 35%;">
+                        <p style="text-align: left"><select id="ltype" name="ltype" style="width:235px"> </select></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p style="text-align: right;">Высокочастотный кабель</p>
+                    </td>
+                    <td style="width: 5%; height: 45px;">
+                        <p><input checked="checked" name="count" onclick="CableType()" type="radio"/></p>
+                    </td>
+                </tr>
+                <tr style="height: 49px;">
+                    <td colspan="3" style="height: 49px;">
+                        <p style="margin-left: 40px; text-align: right;">Длина кабеля, м:</p>
+                    </td>
+                    <td style="height: 49px;">
+                        <p style="text-align: left;"><input maxlength="10" name="len" size="10" type="text" value="1"/>&nbsp;
+                        </p>
+                    </td>
+                </tr>
+                <tr style="height: 23px;">
+                    <td colspan="4" style="height: 23px;">
+                        <div style="background-color: #ff6600; height: 5px; margin: 5px 5px;">&nbsp;</div>
+                    </td>
+                </tr>
+                <tr style="height: 63px;">
+                    <td rowspan="2" style="height: 108px;">
+                        <p style="text-align: left; margin-left: 40px;">Разъем 1:</p>
+                    </td>
+                    <td style="height: 63px;">
+                        <p style="text-align: right;">Прецизионный разъем из стали нержавеющей</p>
+                    </td>
+                    <td style="width: 5%; height: 63px;">
+                        <p><input id="precizion1" name="razem1" type="radio"/></p>
+                    </td>
+                    <td rowspan="2" style="width: 35%; height: 108px;"></td>
+                </tr>
+                <tr style="height: 45px;">
+                    <td style="height: 45px;">
+                        <p style="text-align: right;">ВЧ/СВЧ Разъем</p>
+                    </td>
+                    <td style="width: 5%; height: 45px;">
+                        <p><input checked="checked" name="razem1" type="radio"/></p>
+                    </td>
+                </tr>
+                <tr style="height: 45px;">
+                    <td rowspan="2" style="height: 90px;">
+                        <p style="text-align: right; margin-left: 40px;">Конструктив разъема:</p>
+                    </td>
+                    <td style="height: 45px;">
+                        <p style="text-align: right;">Прямой</p>
+                    </td>
+                    <td style="width: 5%; height: 45px;">
+                        <p><input id="prjamoy1" name="konstruktiv1" type="radio"/></p>
+                    </td>
+                </tr>
+                <tr style="height: 45px;">
+                    <td style="height: 45px;">
+                        <p style="text-align: right;">Угловой</p>
+                    </td>
+                    <td style="width: 5%; height: 45px;">
+                        <p><input checked="checked" name="konstruktiv1" type="radio"/></p>
+                    </td>
+                </tr>
+                <tr style="height: 23px;">
+                    <td colspan="4" style="height: 23px;">
+                        <div style="background-color: #ff6600; height: 5px; margin: 5px 5px;">&nbsp;</div>
+                    </td>
+                </tr>
+                <tr style="height: 63px;">
+                    <td rowspan="2" style="height: 108px;">
+                        <p style="text-align: left; margin-left: 40px;">Разъем 2:</p>
+                    </td>
+                    <td style="height: 63px;">
+                        <p style="text-align: right;">Прецизионный разъем из стали нержавеющей</p>
+                    </td>
+                    <td style="width: 5%; height: 63px;">
+                        <p><input id="precizion2" name="razem2" type="radio"/></p>
+                    </td>
+                    <td rowspan="2" style="width: 35%; height: 108px;"></td>
+                </tr>
+                <tr style="height: 45px;">
+                    <td style="height: 45px;">
+                        <p style="text-align: right;">ВЧ/СВЧ Разъем</p>
+                    </td>
+                    <td style="width: 5%; height: 45px;">
+                        <p><input checked="checked" name="razem2" type="radio"/></p>
+                    </td>
+                </tr>
+                <tr style="height: 45px;">
+                    <td rowspan="2" style="height: 90px;">
+                        <p style="text-align: right; margin-left: 40px;">Конструктив разъема:</p>
+                    </td>
+                    <td style="height: 45px;">
+                        <p style="text-align: right;">Прямой</p>
+                    </td>
+                    <td style="width: 5%; height: 45px;">
+                        <p><input id="prjamoy2" name="konstruktiv2" type="radio"/></p>
+                    </td>
+                </tr>
+                <tr style="height: 45px;">
+                    <td style="height: 45px;">
+                        <p style="text-align: right;">Угловой</p>
+                    </td>
+                    <td style="width: 5%; height: 45px;">
+                        <p><input checked="checked" name="konstruktiv2" type="radio"/></p>
+                    </td>
+                </tr>
+                <tr style="height: 23px;">
+                    <td colspan="4" style="height: 23px;">
+                        <div style="background-color: #ff6600; height: 5px; margin: 5px 5px;">&nbsp;</div>
+                    </td>
+                </tr>
+                <tr style="height: 49px;">
+                    <td colspan="3" style="height: 49px;">
+                        <p style="text-align: left; margin-left: 40px;">Частота сигнала (МГц):</p>
+                    </td>
+                    <td style="height: 49px;">
+                        <p style="text-align: left;"><input type="number" min=1 max=maxGHz maxlength="6" name="freq"
+                                                            size="10" value="1"/></p>
+                    </td>
+                </tr>
+                <tr style="height: 23px;">
+                    <td colspan="4" style="height: 23px;">
+                        <div style="background-color: #ff6600; height: 5px; margin: 5px 5px;">&nbsp;</div>
+                    </td>
+                </tr>
+                <tr style="height: 49px;">
+                    <td colspan="3" style="height: 49px;">
+                        <p style="text-align: left; margin-left: 40px;">Общее затухание в кабельной сборке, дБ не
+                            более:</p>
+                    </td>
+                    <td style="height: 49px;">
+                        <p style="text-align: left;"><input maxlength="10" name="mldb" readonly="readonly" size="10"
+                                                            type="text"/></p>
+                    </td>
+                </tr>
+                <tr style="height: 23px;">
+                    <td colspan="4" style="height: 23px;">
+                        <div style="background-color: #ff6600; height: 5px; margin: 5px 5px;">&nbsp;</div>
+                    </td>
+                </tr>
+                <tr style="height: 81px;">
+                    <td colspan="4" height="35" style="height: 81px;">
 
-            <p align="center"><input onclick="Calculate();" style="font-family: Arial; color: #000066;"
-                                     type="button" value="Расчёт"/> <input
-                    style="font-family: Arial; color: #000066;" type="reset" value=" Сброс "/>
-              <script language="JavaScript" type="text/javascript">
-                function Calculate() {
-                  var i = document.form1.ltype.selectedIndex;
-                  var freq = parseFloat(document.form1.freq.value);
-                  var len = parseFloat(document.form1.len.value);
-
-
-                  var k1 = 0;
-                  var k2 = 0;
-                  var maxGHz = 0;
-                  var c1 = 0;
-                  var c2 = 0;
-                  var a1 = 0.000012 * freq;
-                  var a2 = 0.000017 * freq;
-                  var b1 = 0.000016 * freq;
-                  var b2 = 0.000022 * freq;
+                        <p align="center"><input onclick="Calculate();" style="font-family: Arial; color: #000066;"
+                                                 type="button" value="Расчёт"/> <input
+                                style="font-family: Arial; color: #000066;" type="reset" value=" Сброс "/>
+                        <p id="error" style="color: red; text-align: center"></p>
+                        <script language="JavaScript" type="text/javascript">
+                            function Calculate() {
+                                var i = document.form1.ltype.selectedIndex;
+                                var freq = parseFloat(document.form1.freq.value);
+                                var len = parseFloat(document.form1.len.value);
 
 
-                  if ((document.getElementById('precizion1').checked == true) && (document.getElementById('prjamoy1').checked == true)) {
-                    var c1 = a1;
-                  } else if ((document.getElementById('precizion1').checked == true) && (document.getElementById('prjamoy1').checked == 0)) {
-                    var c1 = a2;
-                  } else if ((document.getElementById('precizion1').checked == 0) && (document.getElementById('prjamoy1').checked == true)) {
-                    var c1 = b1;
-                  } else {
-                    var c1 = b2;
-                  }
-                  ;
-
-                  if ((document.getElementById('precizion2').checked == true) && (document.getElementById('prjamoy2').checked == true)) {
-                    var c2 = a1;
-                  } else if ((document.getElementById('precizion2').checked == true) && (document.getElementById('prjamoy2').checked == 0)) {
-                    var c2 = a2;
-                  } else if ((document.getElementById('precizion2').checked == 0) && (document.getElementById('prjamoy2').checked == true)) {
-                    var c2 = b1;
-                  } else {
-                    var c2 = b2;
-                  }
-                  ;
-                  if (document.getElementById('rus').checked == 0) {
-                    var k1 = (CableList[i][1]);
-                    var k2 = (CableList[i][2]);
-                    var maxGHz = (CableList[i][3]);
-                  } else {
-                    var k1 = (CableListRus[i][1]);
-                    var k2 = (CableListRus[i][2]);
-                    var maxGHz = (CableListRus[i][3]);
-                  }
-                  ;
-
-                  var mldb = ((k1 * Math.sqrt(freq) + k2 * freq) / 100 * len) + c1 + c2;
-
-                  document.form1.mldb.value = Math.round(mldb * 1000) / 1000;
-
-                  return;
-                }
-
-                // Название кабеля, к1, к2, maxGHz
-                var CableList = [
-                          ["RUC-RG-58", 1.1865152, 0.0004548, 5800],
-                          ["RUC-RG-142", 1.2113287, 0.0038671, 12400],
-                          ["RUC-RG-223", 1.2696972, 0.0040303, 12400],
-                          ["RUC-5D-FB CCA", 0.6320085, 0.0010634, 5800],
-                          ["RUC-8D-FB CCA", 0.3971546, 0.0009058, 5800],
-                          ["RUC-RG-405SS", 1.9855376, 0.0040118, 61000],
-                          ["RUC-RG-402SS", 1.1226402, 0.0039990, 34000],
-                          ["RUC-RG-401SS", 0.6640679, 0.0031003, 18000],
-                          ["RUC-RG-174", 2.7216665, 0.0038333, 3000],
-                          ["RUC-RG-316", 2.5804584, 0.0039542, 6000],
-                          ["RUC-RG-316D", 2.5804584, 0.0039542, 6000],
-                          ["RUC-RG-178", 4.4929663, 0.0037034, 3000],
-                          ["RUC-RG-393", 0.6201268, 0.0039873, 11000],
-                          ["RUC-RG-400", 1.4009378, 0.0039062, 12400],
-                          ["RUC-RG-213", 0.6142396, 0.0045760, 1000],
-                          ["RUC-RG-214", 0.6181170, 0.0041883, 11000],
-                          ["RUC-SF-047", 3.4740767, 0.0026346, 109000],
-                          ["RUC-SF-047 FEP", 3.4740767, 0.0026346, 109000],
-                          ["RUC-SF-086", 1.9535041, 0.0026366, 61000],
-                          ["RUC-SF-086 FEP", 1.9535041, 0.0026366, 61000],
-                          ["RUC-SF-141", 1.1022491, 0.0027059, 34000],
-                          ["RUC-SF-141 FEP", 1.1022491, 0.0027059, 34000],
-                          ["RUC-SF-250", 0.6961625, 0.0028667, 19000],
-                          ["RUC-SF-250 FEP", 0.6961625, 0.0028667, 19000],
-                          ["RUC-SR-086 (М, О, С)", 1.9535041, 0.0026366, 61000],
-                          ["RUC-SR-086 AL", 1.9535041, 0.0026366, 61000],
-                          ["RUC-SR-034 (М, О, С)", 4.9508249, 0.0025924, 155000],
-                          ["RUC-SR-047 (М, О, С)", 3.4740767, 0.0026346, 109000],
-                          ["RUC-SR-063 (М, О, С)", 2.5060895, 0.0025243, 85000],
-                          ["RUC-SR-141 (М, О, С)", 1.1022491, 0.0027059, 34000],
-                          ["RUC-SR-141 AL", 1.1035771, 0.0026465, 34000],
-                          ["RUC-SR-160 (М, О, С)", 0.9972863, 0.0034000, 30000],
-                          ["RUC-SR-250 (М, О, С)", 0.6652965, 0.0022470, 19000],
-                          ["RUC-SR-250 AL", 0.6537762, 0.0027622, 19000],
-                          ["RUC-MIC-1.13", 7.1252354, 0.0046803, 6000],
-                          ["RUC-MIC-1.32", 7.1252354, 0.0046803, 6000],
-                          ["RUC-MIC-1.37", 4.7204684, 0.0107257, 6000]
-                        ]
-                ;
-                // Название кабеля, к1, к2, maxGHz
-                var CableListRus = [
-                  ["РКА-3-460", 1.0994853, 0.0006019, 35000],
-                  ["РКА-3.9-520", 0.8562336, 0.0005906, 28000],
-                  ["РКА-4.7-630", 0.6827428, 0.0005906, 23000],
-                  ["РКА-3-480-C", 1.14144000, 0.00393600, 34000],
-                  ["РКА-3-520", 1.13700000, 0.00253000, 63000],
-                  ["РКА-3.8-530", 0.85184880, 0.00247730, 30000],
-                  ["РКА-3.2-580-С", 0.95814540, 0.00045100, 33000],
-                  ["РКБ-1.4-220", 1.9500000, 0.0014500, 81000],
-                  ["РКБ-1.5-230", 1.9500000, 0.0014500, 68000],
-                  ["РКБ-2.5-360", 1.1684700, 0.0005500, 46000],
-                  ["РКБ-4-500", 0.7156867, 0.0003280, 29000],
-                  ["РКБ-6.2-800", 0.4563799, 0.0003280, 18000],
-                  ["РКБ-10.4-1200", 0.2985150, 0.0005100, 11000],
-                  ["РКБ-3.7-440", 0.7751000, 0.0002940, 30000],
-                  ["РКБ-6.3-740", 0.3994521, 0.0005422, 18000],
-                  ["РКБ-1.4-220П", 1.9500000, 0.0014500, 83000],
-                  ["РКБ-1.5-230П", 1.9500000, 0.0014500, 68000],
-                  ["РКБ-2.5-360П", 1.1684700, 0.0005500, 46000],
-                  ["РКБ-4-500П", 0.7156867, 0.0003280, 29000],
-                  ["РКБ-6.2-800П", 0.4563799, 0.0003280, 18000],
-                  ["РКБ-10.4-1200П", 0.2985150, 0.0005100, 11000],
-                  ["РКБ-1.4-220Ф", 1.9500000, 0.0014500, 83000],
-                  ["РКБ-2.5-360Ф", 0.9915499, 0.0005549, 40000],
-                  ["РКБ-4-500Ф", 0.7156867, 0.0003280, 29000],
-                  ["РКБ-6.2-800Ф", 0.4563799, 0.0003280, 18000],
-                  ["РКБ-10.4-1200Ф", 0.2985150, 0.0005100, 11000],
-                  ["РКБ-1.5-230Ф", 1.9500000, 0.0014500, 68000],
-                  ["РКБ-2.2-330Ф", 1.3707349, 0.0004400, 50000],
-                  ["РКБ-2.1-370", 1.5829290, 0.0018060, 50000],
-                  ["РКБ-3-440", 0.9412400, 0.000000002, 38000],
-                  ["РКГ-2.6-400", 1.3437405, 0.0035500, 41000],
-                  ["РКГ-4.2-600", 1.0245600, 0.0017130, 25000],
-                  ["РКГ-6.6-850", 0.5339645, 0.0007236, 16000],
-                  ["РКД-1.7-086", 1.7220000, 0.0005900, 64000],
-                  ["РКД-2.7-120", 1.0550000, 0.0005904, 40000],
-                  ["РКД-3-141", 0.9610400, 0.0005904, 36000],
-                  ["РКД-5.3-630", 0.5444800, 0.0006232, 20000],
-                  ["РКД-0.9-047", 3.5422442, 0.0021545, 115000],
-                  ["РКЕ-1.5-230", 3.0367000, 0.0000001, 69000],
-                  ["РКЕ-2.5-360", 1.2657000, 0.0013435, 46000],
-                  ["РКЕ-3.8-500", 0.8811000, 0.0004150, 30000],
-                  ["РКЕ-6.1-800", 0.5476560, 0.0003772, 18000],
-                  ["РКЕ-10.1-1200", 0.3683585, 0.0005812, 11000],
-                  ["РКС-1-160П", 3.6740161, 0.0035795, 108000],
-                  ["РКС-1.6-280П", 2.0669291, 0.0039370, 62000],
-                  ["РКС-3-400П", 1.0824000, 0.0039370, 34000],
-                  ["РКС-1-160Ф", 3.6019766, 0.0035093, 108000],
-                  ["РКС-1.6-280Ф", 2.0669291, 0.0039370, 62000],
-                  ["РКС-3-400Ф", 1.0824000, 0.0039370, 34000],
-                  ["РКФ-1.7-280", 1.8300000, 0.0028000, 66000],
-                  ["РКФ-2.7-350", 1.1918394, 0.0008800, 39000],
-                  ["РКФ-3.7-500", 0.8330544, 0.0006035, 28000],
-                  ["РКФ-4.3-500", 0.7180000, 0.0010880, 25000],
-                  ["РКФ-6.8-750", 0.4480000, 0.0008980, 16000],
-                  ["РКФ-4.9-620", 0.6077866, 0.0006286, 22000],
-                  ["РКФ-5.3-660", 0.5581451, 0.0006286, 20000],
-                  ["РКФ-7.2-850", 0.4315824, 0.0006035, 15000],
-                  ["РКФ-13.9-1550", 0.2057016, 0.0004875, 8000],
-                  ["РКФ-13.9-1550М", 0.2057016, 0.0004875, 8000],
-                  ["РКИ-1.5-250", 2.2320000, 0.0015600, 68000],
-                  ["РКИ-1.6-250", 2.5808091, 0.0013000, 61000],
-                  ["РКИ-2.7-360", 1.2380700, 0.0006499, 39000],
-                  ["РКТ-1.4-070", 2.2215765, 0.0008404, 81000],
-                  ["РКТ-3-141", 1.0505243, 0.0005985, 39000],
-                  ["РКТ-3-141-С", 1.3371980, 0.0009400, 33000],
-                  ["РКТ-0.8-140", 3.8000300, 0.0001261, 140000],
-                  ["РКТ-3-400", 1.0281700, 0.0012600, 41000]
-                ];
-
-                function BuildList(massif) {
-                  document.getElementById('ltype').options.length = 0;
-                  for (var j = 0; j < massif.length; j++) {
-                    var newOpt = new Option(massif[j][0], j);
-                    document.getElementById('ltype').options.add(newOpt);
-                  }
-                }
-
-                function CableType() {
-
-                  if (document.getElementById('rus').checked == 0) {
-                    BuildList(CableList)
-                  } else {
-                    BuildList(CableListRus)
-                  }
-                }
-
-                BuildList(CableList)
+                                var k1 = 0;
+                                var k2 = 0;
+                                var maxGHz = 0;
+                                var c1 = 0;
+                                var c2 = 0;
+                                var a1 = 0.000012 * freq;
+                                var a2 = 0.000017 * freq;
+                                var b1 = 0.000016 * freq;
+                                var b2 = 0.000022 * freq;
 
 
-              </script>
-            </p>
-          </td>
-        </tr>
-        </tbody>
-      </table>
-    </form>
-  </div>
+                                if ((document.getElementById('precizion1').checked == true) && (document.getElementById('prjamoy1').checked == true)) {
+                                    var c1 = a1;
+                                } else if ((document.getElementById('precizion1').checked == true) && (document.getElementById('prjamoy1').checked == 0)) {
+                                    var c1 = a2;
+                                } else if ((document.getElementById('precizion1').checked == 0) && (document.getElementById('prjamoy1').checked == true)) {
+                                    var c1 = b1;
+                                } else {
+                                    var c1 = b2;
+                                }
+                                ;
+
+                                if ((document.getElementById('precizion2').checked == true) && (document.getElementById('prjamoy2').checked == true)) {
+                                    var c2 = a1;
+                                } else if ((document.getElementById('precizion2').checked == true) && (document.getElementById('prjamoy2').checked == 0)) {
+                                    var c2 = a2;
+                                } else if ((document.getElementById('precizion2').checked == 0) && (document.getElementById('prjamoy2').checked == true)) {
+                                    var c2 = b1;
+                                } else {
+                                    var c2 = b2;
+                                }
+                                ;
+                                if (document.getElementById('rus').checked == 0) {
+                                    var k1 = (CableList[i][1]);
+                                    var k2 = (CableList[i][2]);
+                                    var maxGHz = (CableList[i][3]);
+                                } else {
+                                    var k1 = (CableListRus[i][1]);
+                                    var k2 = (CableListRus[i][2]);
+                                    var maxGHz = (CableListRus[i][3]);
+                                }
+                                var validateFreqError = validateFreq(freq, maxGHz);
+                                if (validateFreqError === '') {
+                                    document.getElementById('error').innerText = '';
+                                    var mldb = ((k1 * Math.sqrt(freq) + k2 * freq) / 100 * len) + c1 + c2;
+                                    document.form1.mldb.value = Math.round(mldb * 1000) / 1000;
+                                } else {
+                                    document.getElementById('error').innerText = validateFreqError;
+                                    document.form1.mldb.value = '';
+                                }
+                            }
+
+                            // Название кабеля, к1, к2, maxGHz
+                            var CableList = [
+                                    ["RUC-RG-58", 1.1865152, 0.0004548, 5800],
+                                    ["RUC-RG-142", 1.2113287, 0.0038671, 12400],
+                                    ["RUC-RG-223", 1.2696972, 0.0040303, 12400],
+                                    ["RUC-5D-FB CCA", 0.6320085, 0.0010634, 5800],
+                                    ["RUC-8D-FB CCA", 0.3971546, 0.0009058, 5800],
+                                    ["RUC-RG-405SS", 1.9855376, 0.0040118, 61000],
+                                    ["RUC-RG-402SS", 1.1226402, 0.0039990, 34000],
+                                    ["RUC-RG-401SS", 0.6640679, 0.0031003, 18000],
+                                    ["RUC-RG-174", 2.7216665, 0.0038333, 3000],
+                                    ["RUC-RG-316", 2.5804584, 0.0039542, 6000],
+                                    ["RUC-RG-316D", 2.5804584, 0.0039542, 6000],
+                                    ["RUC-RG-178", 4.4929663, 0.0037034, 3000],
+                                    ["RUC-RG-393", 0.6201268, 0.0039873, 11000],
+                                    ["RUC-RG-400", 1.4009378, 0.0039062, 12400],
+                                    ["RUC-RG-213", 0.6142396, 0.0045760, 1000],
+                                    ["RUC-RG-214", 0.6181170, 0.0041883, 11000],
+                                    ["RUC-SF-047", 3.4740767, 0.0026346, 109000],
+                                    ["RUC-SF-047 FEP", 3.4740767, 0.0026346, 109000],
+                                    ["RUC-SF-086", 1.9535041, 0.0026366, 61000],
+                                    ["RUC-SF-086 FEP", 1.9535041, 0.0026366, 61000],
+                                    ["RUC-SF-141", 1.1022491, 0.0027059, 34000],
+                                    ["RUC-SF-141 FEP", 1.1022491, 0.0027059, 34000],
+                                    ["RUC-SF-250", 0.6961625, 0.0028667, 19000],
+                                    ["RUC-SF-250 FEP", 0.6961625, 0.0028667, 19000],
+                                    ["RUC-SR-086 (М, О, С)", 1.9535041, 0.0026366, 61000],
+                                    ["RUC-SR-086 AL", 1.9535041, 0.0026366, 61000],
+                                    ["RUC-SR-034 (М, О, С)", 4.9508249, 0.0025924, 155000],
+                                    ["RUC-SR-047 (М, О, С)", 3.4740767, 0.0026346, 109000],
+                                    ["RUC-SR-063 (М, О, С)", 2.5060895, 0.0025243, 85000],
+                                    ["RUC-SR-141 (М, О, С)", 1.1022491, 0.0027059, 34000],
+                                    ["RUC-SR-141 AL", 1.1035771, 0.0026465, 34000],
+                                    ["RUC-SR-160 (М, О, С)", 0.9972863, 0.0034000, 30000],
+                                    ["RUC-SR-250 (М, О, С)", 0.6652965, 0.0022470, 19000],
+                                    ["RUC-SR-250 AL", 0.6537762, 0.0027622, 19000],
+                                    ["RUC-MIC-1.13", 7.1252354, 0.0046803, 6000],
+                                    ["RUC-MIC-1.32", 7.1252354, 0.0046803, 6000],
+                                    ["RUC-MIC-1.37", 4.7204684, 0.0107257, 6000]
+                                ]
+                            ;
+                            // Название кабеля, к1, к2, maxGHz
+                            var CableListRus = [
+                                ["РКА-3-460", 1.0994853, 0.0006019, 35000],
+                                ["РКА-3.9-520", 0.8562336, 0.0005906, 28000],
+                                ["РКА-4.7-630", 0.6827428, 0.0005906, 23000],
+                                ["РКА-3-480-C", 1.14144000, 0.00393600, 34000],
+                                ["РКА-3-520", 1.13700000, 0.00253000, 63000],
+                                ["РКА-3.8-530", 0.85184880, 0.00247730, 30000],
+                                ["РКА-3.2-580-С", 0.95814540, 0.00045100, 33000],
+                                ["РКБ-1.4-220", 1.9500000, 0.0014500, 81000],
+                                ["РКБ-1.5-230", 1.9500000, 0.0014500, 68000],
+                                ["РКБ-2.5-360", 1.1684700, 0.0005500, 46000],
+                                ["РКБ-4-500", 0.7156867, 0.0003280, 29000],
+                                ["РКБ-6.2-800", 0.4563799, 0.0003280, 18000],
+                                ["РКБ-10.4-1200", 0.2985150, 0.0005100, 11000],
+                                ["РКБ-3.7-440", 0.7751000, 0.0002940, 30000],
+                                ["РКБ-6.3-740", 0.3994521, 0.0005422, 18000],
+                                ["РКБ-1.4-220П", 1.9500000, 0.0014500, 83000],
+                                ["РКБ-1.5-230П", 1.9500000, 0.0014500, 68000],
+                                ["РКБ-2.5-360П", 1.1684700, 0.0005500, 46000],
+                                ["РКБ-4-500П", 0.7156867, 0.0003280, 29000],
+                                ["РКБ-6.2-800П", 0.4563799, 0.0003280, 18000],
+                                ["РКБ-10.4-1200П", 0.2985150, 0.0005100, 11000],
+                                ["РКБ-1.4-220Ф", 1.9500000, 0.0014500, 83000],
+                                ["РКБ-2.5-360Ф", 0.9915499, 0.0005549, 40000],
+                                ["РКБ-4-500Ф", 0.7156867, 0.0003280, 29000],
+                                ["РКБ-6.2-800Ф", 0.4563799, 0.0003280, 18000],
+                                ["РКБ-10.4-1200Ф", 0.2985150, 0.0005100, 11000],
+                                ["РКБ-1.5-230Ф", 1.9500000, 0.0014500, 68000],
+                                ["РКБ-2.2-330Ф", 1.3707349, 0.0004400, 50000],
+                                ["РКБ-2.1-370", 1.5829290, 0.0018060, 50000],
+                                ["РКБ-3-440", 0.9412400, 0.000000002, 38000],
+                                ["РКГ-2.6-400", 1.3437405, 0.0035500, 41000],
+                                ["РКГ-4.2-600", 1.0245600, 0.0017130, 25000],
+                                ["РКГ-6.6-850", 0.5339645, 0.0007236, 16000],
+                                ["РКД-1.7-086", 1.7220000, 0.0005900, 64000],
+                                ["РКД-2.7-120", 1.0550000, 0.0005904, 40000],
+                                ["РКД-3-141", 0.9610400, 0.0005904, 36000],
+                                ["РКД-5.3-630", 0.5444800, 0.0006232, 20000],
+                                ["РКД-0.9-047", 3.5422442, 0.0021545, 115000],
+                                ["РКЕ-1.5-230", 3.0367000, 0.0000001, 69000],
+                                ["РКЕ-2.5-360", 1.2657000, 0.0013435, 46000],
+                                ["РКЕ-3.8-500", 0.8811000, 0.0004150, 30000],
+                                ["РКЕ-6.1-800", 0.5476560, 0.0003772, 18000],
+                                ["РКЕ-10.1-1200", 0.3683585, 0.0005812, 11000],
+                                ["РКС-1-160П", 3.6740161, 0.0035795, 108000],
+                                ["РКС-1.6-280П", 2.0669291, 0.0039370, 62000],
+                                ["РКС-3-400П", 1.0824000, 0.0039370, 34000],
+                                ["РКС-1-160Ф", 3.6019766, 0.0035093, 108000],
+                                ["РКС-1.6-280Ф", 2.0669291, 0.0039370, 62000],
+                                ["РКС-3-400Ф", 1.0824000, 0.0039370, 34000],
+                                ["РКФ-1.7-280", 1.8300000, 0.0028000, 66000],
+                                ["РКФ-2.7-350", 1.1918394, 0.0008800, 39000],
+                                ["РКФ-3.7-500", 0.8330544, 0.0006035, 28000],
+                                ["РКФ-4.3-500", 0.7180000, 0.0010880, 25000],
+                                ["РКФ-6.8-750", 0.4480000, 0.0008980, 16000],
+                                ["РКФ-4.9-620", 0.6077866, 0.0006286, 22000],
+                                ["РКФ-5.3-660", 0.5581451, 0.0006286, 20000],
+                                ["РКФ-7.2-850", 0.4315824, 0.0006035, 15000],
+                                ["РКФ-13.9-1550", 0.2057016, 0.0004875, 8000],
+                                ["РКФ-13.9-1550М", 0.2057016, 0.0004875, 8000],
+                                ["РКИ-1.5-250", 2.2320000, 0.0015600, 68000],
+                                ["РКИ-1.6-250", 2.5808091, 0.0013000, 61000],
+                                ["РКИ-2.7-360", 1.2380700, 0.0006499, 39000],
+                                ["РКТ-1.4-070", 2.2215765, 0.0008404, 81000],
+                                ["РКТ-3-141", 1.0505243, 0.0005985, 39000],
+                                ["РКТ-3-141-С", 1.3371980, 0.0009400, 33000],
+                                ["РКТ-0.8-140", 3.8000300, 0.0001261, 140000],
+                                ["РКТ-3-400", 1.0281700, 0.0012600, 41000]
+                            ];
+
+                            function BuildList(massif) {
+                                document.getElementById('ltype').options.length = 0;
+                                for (var j = 0; j < massif.length; j++) {
+                                    var newOpt = new Option(massif[j][0], j);
+                                    document.getElementById('ltype').options.add(newOpt);
+                                }
+                            }
+
+                            function CableType() {
+
+                                if (document.getElementById('rus').checked == 0) {
+                                    BuildList(CableList)
+                                } else {
+                                    BuildList(CableListRus)
+                                }
+                            }
+
+                            function validateFreq(value, max) {
+                                var error = '';
+                                if (!Number.isInteger(value) || (value > max || value <= 0)) {
+                                    error = 'Введите целое число от 1 до ' + max;
+                                }
+
+                                return error;
+                            }
+
+                            BuildList(CableList)
+
+
+                        </script>
+                        </p>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
 </div>
 </html>
