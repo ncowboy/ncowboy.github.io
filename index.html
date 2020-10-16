@@ -154,8 +154,8 @@
                         <p style="text-align: left; margin-left: 40px;">Частота сигнала (МГц):</p>
                     </td>
                     <td>
-                        <p style="text-align: left;"><input type="number" min=1 max=maxGHz maxlength="6" name="freq"
-                                                            size="10" value="1"/></p>
+                        <p style="text-align: left;"><input type="text" name="freq"
+                                                            value="1"/></p>
                     </td>
                 <tr>
                     <td colspan="4">
@@ -192,7 +192,8 @@
                             <script language="JavaScript" type="text/javascript">
                                 function Calculate() {
                                     var i = document.form1.ltype.selectedIndex;
-                                    var freq = parseFloat(document.form1.freq.value);
+                                    var freqField = document.form1.freq;
+                                    var freq = parseFloat(freqField.value);
                                     var len = parseFloat(document.form1.len.value);
 
 
@@ -237,6 +238,8 @@
                                         var k2 = (CableListRus[i][2]);
                                         var maxGHz = (CableListRus[i][3]);
                                     }
+
+
                                     var validateFreqError = validateFreq(freq, maxGHz);
                                     if (validateFreqError === '') {
                                         document.getElementById('error').innerText = '';
